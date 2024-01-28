@@ -9,8 +9,10 @@ class Car(color: String, brand: String, model: String, horsePower: Int, doorNum:
         }
 
     val brand: String = brand
+        get() = field.replaceFirstChar {it.uppercase()}
 
     val model: String = model
+        get() = field.replaceFirstChar {it.uppercase()}
 
     val horsePower: Int = horsePower
 
@@ -60,6 +62,6 @@ class Car(color: String, brand: String, model: String, horsePower: Int, doorNum:
     /** Verifica que la matrícula tenga 7 caracteres
      */
     private fun verifyLicensePlate(licensePlate: String) {
-        require(licensePlate.length == 7) {"La matrícula debe tener 7 caracteres"}
+        require(licensePlate.trim().length == 7) {"La matrícula debe tener 7 caracteres"}
     }
 }
