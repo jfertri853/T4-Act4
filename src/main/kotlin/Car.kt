@@ -8,17 +8,17 @@ class Car(color: String, brand: String, model: String, horsePower: Int, doorNum:
             field = value
         }
 
-    val brand: String = brand
+    private val brand: String = brand
         get() = field.replaceFirstChar {it.uppercase()}
 
-    val model: String = model
+    private val model: String = model
         get() = field.replaceFirstChar {it.uppercase()}
 
-    val horsePower: Int = horsePower
+    private val horsePower: Int = horsePower
 
-    val doorNum: Int = doorNum
+    private val doorNum: Int = doorNum
 
-    val licensePlate: String = licensePlate
+    private val licensePlate: String = licensePlate
 
     init {
         verifyColor(color)
@@ -63,5 +63,10 @@ class Car(color: String, brand: String, model: String, horsePower: Int, doorNum:
      */
     private fun verifyLicensePlate(licensePlate: String) {
         require(licensePlate.trim().length == 7) {"La matrícula debe tener 7 caracteres"}
+    }
+
+    override fun toString(): String {
+        return "color: $color, marca: $brand, modelo: $model, numero de caballos: $horsePower, " +
+                "numero de puertas: $doorNum, matrícula: $licensePlate"
     }
 }
