@@ -14,7 +14,7 @@ Recuerda que Kotlin añade los getters y setters con el comportamiento por defec
         no tenga 7 caracteres.
     - Los atributos de modelo la marca siempre se devolverán con la primera letra en mayúscula.
     - Realiza también una modificación del atributo número de caballos,
-        para que no permita actualizar el atributo numCaballos con un valor interior a 70, ni superior a 700.
+        para que no permita actualizar el atributo numCaballos con un valor inferior a 70, ni superior a 700.
     - Realiza una modificación del atributo número de puertas,
         para que no permita actualizar el atributo numPuertas con un valor inferior a 3, ni superior a 5.
     - Ten en cuenta todas estas condiciones a la hora de crear el constructor de la clase.
